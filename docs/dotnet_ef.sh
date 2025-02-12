@@ -18,6 +18,14 @@ dotnet ef dbcontext  script    #Generates a SQL script from the DbContext. Bypas
 
 dotnet ef migrations add   #                     Adds a new migration.
 dotnet ef migrations  bundle            #         Creates an executable to update the database.
+#  dehttps://learn.microsoft.com/en-us/azure/app-service/tutorial-dotnetcore-sqldb-app
+# description shows why the bundle is  needed
+# Under the new step, add another step to generate a database migration bundle
+# in the deployment package: dotnet ef migrations bundle --runtime linux-x64 -p DotNetCoreSqlDb/DotNetCoreSqlDb.csproj -o ${{env.DOTNET_ROOT}}/myapp/migrate. 
+# The migration bundle is a self-contained executable that you can run in the production environment
+# without needing the .NET SDK. The App Service linux container only has the .NET runtime and not the .NET SDK.
+
+
 dotnet ef migrations  has-pending-model-changes # Checks if any changes have been made to the model since the last migration.
 dotnet ef migrations  list                     #  Lists available migrations.
 dotnet ef migrations  remove                  #   Removes the last migration.

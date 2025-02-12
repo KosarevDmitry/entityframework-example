@@ -41,12 +41,12 @@ public Blog Blog { get; set; }
 }
 EOF
 
-# уже установлен
+# installed already
 # dotnet tool install --global dotnet-ef
 dotnet add package Microsoft.EntityFrameworkCore.Design
-# создает 3 файла: 2 наследую от `Migration`  `public partial class InitialCreate : Migration` и один от `ModelSnapshot`
+# create 3 files: two inherits from `Migration`  `public partial class InitialCreate : Migration`  and one from `ModelSnapshot`
 dotnet ef migrations add InitialCreate
-# создает базу данных
+# create db
 dotnet ef database update
 
 

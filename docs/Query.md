@@ -1,8 +1,8 @@
 ﻿
-# только для моделей
+# for model only
 - FromSql  
 - FromSqlRaw
-# для скалярных величин
+# for scalar values
 - SqlQueryRaw
 - SqlQuery
 - ExecuteSql

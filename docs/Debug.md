@@ -1,5 +1,5 @@
 ﻿
-Свойства для дебагера
+debugger properties
 `var trackerlongView = _context.ChangeTracker.DebugView.LongView;`
-можно выбрать разные MetadataDebugStringOptions
+There is a possibility to choose different  MetadataDebugStringOptions
 `var modelview =     _context.Model.ToDebugString(MetadataDebugStringOptions.IncludeAnnotations);`

@@ -1917,5 +1917,5 @@
     - Jun 10: [EF Core Power Tools](https://www.youtube.com/live/OWuP_qOYwsk?si=VoSGWW6CfR8-x46P)
     - May 6: [Introducing the EF Core Community Standup](https://www.youtube.com/live/j1sGgfCxhp0?si=VQBMex-9-me9JhAB)
 
-[^1]: Важный вопрос- обработки ошибок
-[^2]: транзакции
+[^1]: Important case - error handler
+[^2]: Transaction
