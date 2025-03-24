@@ -3,6 +3,8 @@ https://learn.microsoft.com/en-us/ef/core/cli/dotnet
 dotnet tool install --global dotnet-ef
 dotnet tool update --global dotnet-ef
 
+
+
 dotnet add package Microsoft.EntityFrameworkCore.Design
 
 dotnet ef database  drop   # Drops the database.
@@ -16,7 +18,8 @@ dotnet ef dbcontext scaffold  # Scaffolds a DbContext and entity types for a dat
 #dotnet ef dbcontext scaffold "Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -t Blog -t Post --context-dir Context -c BlogContext --context-namespace New.Namespace
 dotnet ef dbcontext  script    #Generates a SQL script from the DbContext. Bypasses any migrations.
 
-dotnet ef migrations add   #                     Adds a new migration.
+dotnet ef migrations add InitialCreate -o Data/Migrations # to folder  Data/Migrations, good approach
+ dotnet ef migrations add   #                     Adds a new migration.
 dotnet ef migrations  bundle            #         Creates an executable to update the database.
 #  dehttps://learn.microsoft.com/en-us/azure/app-service/tutorial-dotnetcore-sqldb-app
 # description shows why the bundle is  needed
